@@ -1,0 +1,12 @@
+
+<h1>Save any kind of movie</h1>
+<h3>My Lists</h3>
+<div class="row">
+  <% @lists.each do |list| %>
+    <div>
+      <%= link_to list.name, list_path(list), class:"text-decoration-none" %>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to "Create a movie list", new_list_path, class: "btn btn-flat" %>
